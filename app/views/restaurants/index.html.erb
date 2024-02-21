@@ -1,0 +1,9 @@
+<h1>Restaurants</h1>
+  <% @restaurants.each do |resto| %>
+<div class="card m-3 p-3">
+  <h3><%= resto.name %></h3>
+  <p><%= resto.address %></p>
+  <p class="badge text-black text-start m-0"><%= resto.category %></p>
+  <%= link_to "More infos", restaurant_path(resto) %>
+</div>
+<% end %>
